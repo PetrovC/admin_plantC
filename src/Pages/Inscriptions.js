@@ -14,7 +14,7 @@ const Inscription= ()=> {
             <main>
                 
                 <Typography component ='h1' variant='h3'>
-                    Agenda
+                    Inscription
                 </Typography>
 
             </main>
