@@ -1,8 +1,9 @@
 import { Typography } from "@mui/material";
 import React from 'react';
 import TextField from '@mui/material/TextField';
+import TextareaAutosize from '@mui/material/TextareaAutosize';
 
-
+import Stack from '@mui/material/Stack';
 
 
 
@@ -16,18 +17,19 @@ const Tache= ()=> {
 
         return (
             
-
+            
             <main>
                 
                 <Typography component ='h1' variant='h3'>
                     Tache
                 </Typography>
                 <form >
+                <Stack spacing={3} sx={{ mx: "auto", width: 600 }}>
                         <div>
                         <Typography component ='h1' variant='h5'>
-                                <label component ='h1'>
+                                
                                 type d'activiter
-                                </label>
+                                
                         </Typography>
                         
                         
@@ -49,10 +51,14 @@ const Tache= ()=> {
                         
                         </div>
                         <div>
-                        
-                        <textarea>
-                          Bonjour, voici du texte dans une zone de texte
-                         </textarea>
+                        <TextareaAutosize
+                        aria-label="minimum height"
+                        label="Description"
+                        minRows={5}
+                        placeholder="Minimum 3 rows"
+                        style={{ width: 300 }
+                         }
+                        ></TextareaAutosize>
                         
                         
                          </div>
@@ -64,16 +70,17 @@ const Tache= ()=> {
                          </div>
                          <div>
                          
-                         <input type="date"  />
+                         
                         
                          
                          </div>
 
                          <input type="submit" value="Envoyer" />
-                                                
+                         </Stack>                    
                     </form>
                 
             </main>
+            
         )
 
     

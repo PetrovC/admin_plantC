@@ -1,6 +1,6 @@
 
 import './App.css';
-
+import NavBar from "./componement/navBar/NavBar";
 
 import { useRoutes } from 'react-router-dom';
 import { appRoute } from './route';
@@ -14,7 +14,9 @@ function App() {
        
       {router}
       <heads />
+      <NavBar />
     </div>
+    
   );
 }
 
