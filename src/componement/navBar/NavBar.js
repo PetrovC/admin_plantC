@@ -1,6 +1,9 @@
 import React from 'react';
 
 import { Typography } from "@mui/material";
+import Stack from '@mui/material/Stack';
+import { Link } from 'react-router-dom'
+
 
 
 const NavBar= ()=> {
@@ -14,16 +17,36 @@ const NavBar= ()=> {
 
             <main>
                 
+                
+                <Stack spacing={3} sx={{ mx: "auto", width: 600 }}>
                 <Typography component ='h1' variant='h3'>
                     NavBar
                 </Typography>
-                <ul>
-                <li><a href="http://localhost:3001/Agenda">Agenda</a></li>
-                <li><a href="http://localhost:3001/Home">Home</a></li>
-                <li><a href="http://localhost:3001/Tache">Tache</a></li>
-                <li><a href="http://localhost:3001/Mission">Mission</a></li>
-                <li><a href="http://localhost:3001/Inscription">Inscription</a></li>
-                 </ul>
+                {/* <ul>
+                <li><a href="/Agenda">Agenda</a></li>
+                <li><a href="/Home">Home</a></li>
+                <li><a href="/Tache">Tache</a></li>
+                <li><a href="/Mission">Mission</a></li>
+                <li><a href="/Inscription">Inscription</a></li>
+                 </ul> */}
+                 
+                    <Link to="/Home">
+                    Home
+                    </Link>
+                    <Link to="/Tache" >
+                    Tache
+                    </Link>
+                    <Link to="/Mission" >
+                    Mission
+                    </Link>
+                    <Link to="/Agenda" >
+                    Agenda
+                    </Link>
+                    <Link to="/Inscription" >
+                    Inscription
+                    </Link>
+                
+                 </Stack>
             </main>
         )
 

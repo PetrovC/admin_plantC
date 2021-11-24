@@ -6,7 +6,7 @@ import Inscription from "./Pages/Inscriptions"
 
 
 export const appRoute = [
-    {path : '', element:null},
+    {path : '', element:<Home />},
     {path:'home', element:<Home />},
     {path:'Agenda', element:<Agenda />},
     {path:'Tache', element:<Tache />},
