@@ -1,56 +1,76 @@
-import React from 'react';
-
-import { Typography } from "@mui/material";
-import Stack from '@mui/material/Stack';
+// import AppBar from '@mui/material/AppBar';
+import {Box,List,ListItem,ListItemButton } from '@mui/material';
 import { Link } from 'react-router-dom'
 
-
-
-const NavBar= ()=> {
+const Navvv= ()=> {
     
 
         
 
 
-        return (
+    return (
+        
+
+        <div>
+            <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                <nav aria-label="main mailbox folders">
+                    <List>
+                    <ListItem disablePadding>
+                        <Link to="/Home" >
+                            <ListItemButton>
+                                PlantC
+                            </ListItemButton>
+                            </Link>
+                        </ListItem>
+
+                        <ListItem disablePadding>
+                        <Link to="/Home" >
+                            <ListItemButton>
+                                Home
+                            </ListItemButton>
+                            </Link>
+                        </ListItem>
+                    
+
+                        <ListItem disablePadding>
+                        <Link to="/Tache" >
+                            <ListItemButton>
+                                Tache
+                            </ListItemButton>
+                            </Link>
+                        </ListItem>
+                        <ListItem disablePadding>
+                        <Link to="/Agenda" >
+                            <ListItemButton>
+                                Agenda
+                            </ListItemButton>
+                            </Link>
+                        </ListItem>
+
+                        <ListItem disablePadding>
+                            <Link to="/Inscription" >
+                                <ListItemButton>
+                                    Inscription
+                                </ListItemButton>
+                            </Link>
+                        </ListItem>
+
+                        <ListItem disablePadding>
+                            <Link to="/Mission" >
+                                <ListItemButton>
+                                    Mission
+                                </ListItemButton>
+                            </Link>
+                        </ListItem>
+
+                    </List>
+                </nav>
+                </Box>
             
+        </div>
+    )
 
-            <main>
-                
-                
-                <Stack spacing={3} sx={{ mx: "auto", width: 600 }}>
-                <Typography component ='h1' variant='h3'>
-                    NavBar
-                </Typography>
-                {/* <ul>
-                <li><a href="/Agenda">Agenda</a></li>
-                <li><a href="/Home">Home</a></li>
-                <li><a href="/Tache">Tache</a></li>
-                <li><a href="/Mission">Mission</a></li>
-                <li><a href="/Inscription">Inscription</a></li>
-                 </ul> */}
-                 
-                    <Link to="/Home">
-                    Home
-                    </Link>
-                    <Link to="/Tache" >
-                    Tache
-                    </Link>
-                    <Link to="/Mission" >
-                    Mission
-                    </Link>
-                    <Link to="/Agenda" >
-                    Agenda
-                    </Link>
-                    <Link to="/Inscription" >
-                    Inscription
-                    </Link>
-                
-                 </Stack>
-            </main>
-        )
 
-    
 
 }
-export default NavBar;
+export default Navvv;

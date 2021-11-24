@@ -1,10 +1,11 @@
 
 import './App.css';
-import NavBar from "./componement/navBar/NavBar";
-// import Navv from "./componement/navBar/nav";
+
+
 
 import { useRoutes } from 'react-router-dom';
 import { appRoute } from './route';
+import Navvv from './componement/navBar/NavBar';
 
 
 
@@ -13,10 +14,11 @@ function App() {
   
   return (
     <div >
-       {/* <Navv/> */}
+      <Navvv/>
+       
       {router}
       <heads />
-      <NavBar />
+      
     </div>
     
   );
