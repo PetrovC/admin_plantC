@@ -49,7 +49,9 @@ const Tache= ()=> {
                 <form>
                 
                 <Stack spacing={3} sx={{ mx: "auto", width: 600 }}>
-                        <div>
+                        <Stack sx={{ mx: "auto",width: 600}} > 
+
+                        
 
                         
                         <Typography sx={{ mx: "auto"}} component ='h1' variant='h5' >
@@ -61,7 +63,7 @@ const Tache= ()=> {
                         value={age}
                         
                         onChange={handleChange}
-                        style={{ width: 300 }}
+                        sx={{ width: '100%'}}
                         >
                             
                         <MenuItem value={10}>Ten</MenuItem>
@@ -70,20 +72,23 @@ const Tache= ()=> {
                         </Select>
                        
                                   
-                        </div>
+                        </Stack>
 
-
-                        <div>
-                        <Typography component ='h1' variant='h5'>
+                        <Stack sx={{ mx: "auto",width: 600}} >
+                        
+                        <Typography component ='h1' variant='h5'sx={{ mx: "auto"}}>
                         Adress :
                         </Typography>
-                        <TextField id="outlined-basic" variant="outlined" style={{ width: 300 }}>
+                        <TextField id="outlined-basic" variant="outlined" sx={{ width: '100%'}}>
                         <input type="text"  />
                         </TextField>
                         
-                        </div>
-                        <div>
-                        <Typography component ='h1' variant='h5'>
+                        
+                        </Stack>
+
+
+                        <Stack sx={{ mx: "auto",width: 600}} >
+                        <Typography component ='h1' variant='h5'sx={{ mx: "auto"}}>
                         Description :
                         </Typography>
                   
@@ -91,26 +96,28 @@ const Tache= ()=> {
                         aria-label="minimum height"
                         
                         minRows={5}
-                        placeholder="Description"
-                        style={{ width: 300 }
+                        placeholder=""
+                        style={{ width: 600 }
                          }
                         ></TextareaAutosize>
                           
+                          </Stack>
+                        
+                        
                          
-                        
-                        
-                         </div>
-                         <div>
-                         <Typography component ='h1' variant='h5'>
+                          <Stack sx={{ mx: "auto",width: 600}} >
+                         <Typography component ='h1' variant='h5' sx={{ mx: "auto"}}>
                          Travailleur :
                         </Typography>
-                         <TextField id="outlined-basic" variant="outlined" style={{ width: 300 }}>
+                         <TextField id="outlined-basic" variant="outlined" sx={{ width: '100%'}}>
                          <input type="text"  />
                         </TextField>
                          
-                         </div>
-                         <div>
-                         <Typography component ='h1' variant='h5'>
+                        </Stack>
+
+
+                        <Stack sx={{ mx: "auto",width: 600}} >
+                         <Typography component ='h1' variant='h5'sx={{ mx: "auto"}}>
                          Date :
                          </Typography>
                          
@@ -119,7 +126,7 @@ const Tache= ()=> {
                             <LocalizationProvider dateAdapter={AdapterDateFns} >
                                 
                                     <DesktopDatePicker
-                                    style={{ width: 300 }}
+                                    sx={{ width: '100%'}}
                                     inputFormat="MM/dd/yyyy"
                                     value={value}
                                     onChange={handleChange2}
@@ -127,13 +134,13 @@ const Tache= ()=> {
                                     />
                             </LocalizationProvider>
                          
-                         </div>
+                            </Stack>
 
-                         
-                         <Button type="submit" variant="contained" style={{ width: 100 }}>
+                            <Stack sx={{ mx: "auto",width: 600}} >
+                         <Button type="submit" variant="contained" style={{ width: 100 }} sx={{ mx: "auto"}}>
                                 Envoyer
                          </Button>
-
+                         </Stack>
 
                          </Stack>                    
                     
