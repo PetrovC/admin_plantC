@@ -2,6 +2,7 @@
 import {Box,ListItemButton, AppBar, Toolbar, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom'
 // import {ListItem,ListItemButton } from '@mui/material';
+import '../style/MyStyle.css'
 
 const Navvv= ()=> {
     
@@ -15,36 +16,38 @@ const Navvv= ()=> {
         <div>
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar position="static">
-                    <Toolbar>
+                    <Toolbar  >
                     
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} >
                         PlantC
                     </Typography>
-                    <Link to="/Home"  >
-                            <ListItemButton>
+                    
+                    <Link to="/Home"  className="color" >
+                            <ListItemButton >
                                 Home
                             </ListItemButton>
                     </Link>
-                    <Link to="/Tache"  >
+                    <Link to="/Tache" className="color" >
                             <ListItemButton>
                                 Tache
                             </ListItemButton>
                     </Link>
-                    <Link to="/Agenda">
+                    <Link to="/Agenda" className="color">
                             <ListItemButton>
                                 Agenda
                             </ListItemButton>
                     </Link>
-                    <Link to="/Inscription" >
-                                <ListItemButton>
+                    <Link to="/Inscription" className="color">
+                                <ListItemButton  >
                                     Inscription
                                 </ListItemButton>
                     </Link>
-                    <Link to="/Mission"  >
+                    <Link to="/Mission" className="color" >
                                 <ListItemButton >
                                     Mission
                                 </ListItemButton>
                     </Link>
+                    
                     
                         
                     <Button color="inherit" >Login</Button>

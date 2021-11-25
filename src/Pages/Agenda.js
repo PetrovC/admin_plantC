@@ -2,25 +2,25 @@ import { Typography } from "@mui/material";
 import React from 'react';
 
 
-const Agenda= ()=> {
-    
-
-        
+const Agenda = () => {
 
 
-        return (
-            
 
-            <main>
-                
-                <Typography component ='h1' variant='h3'>
-                    Agenda
+
+
+    return (
+
+
+        <main>
+
+            <Typography component='h1' variant='h3'>
+                Agenda
                 </Typography>
 
-            </main>
-        )
+        </main>
+    )
 
-    
+
 
 }
 export default Agenda;

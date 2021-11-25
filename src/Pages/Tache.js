@@ -13,6 +13,9 @@ import AdapterDateFns from '@mui/lab/AdapterDateFns'
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DesktopDatePicker from '@mui/lab/DesktopDatePicker';
 
+//css
+import '../componement/style/MyStyle.css'
+
 
 
 const Tache= ()=> {
@@ -40,7 +43,7 @@ const Tache= ()=> {
             
             <main>
                 
-                <Typography sx={{ mx: "auto"}}  component ='h1' variant='h3'>
+                <Typography sx={{ mx: "auto"}}  component ='h1' variant='h3' >
                     Tache
                 </Typography>
                 <form>
@@ -49,7 +52,7 @@ const Tache= ()=> {
                         <div>
 
                         
-                        <Typography sx={{ mx: "auto"}} component ='h1' variant='h5'>
+                        <Typography sx={{ mx: "auto"}} component ='h1' variant='h5' >
                             Type d'activité:
                         </Typography>
                         <Select
@@ -58,6 +61,7 @@ const Tache= ()=> {
                         value={age}
                         
                         onChange={handleChange}
+                        style={{ width: 300 }}
                         >
                             
                         <MenuItem value={10}>Ten</MenuItem>
@@ -73,7 +77,7 @@ const Tache= ()=> {
                         <Typography component ='h1' variant='h5'>
                         Adress :
                         </Typography>
-                        <TextField id="outlined-basic" variant="outlined">
+                        <TextField id="outlined-basic" variant="outlined" style={{ width: 300 }}>
                         <input type="text"  />
                         </TextField>
                         
@@ -100,7 +104,7 @@ const Tache= ()=> {
                          <Typography component ='h1' variant='h5'>
                          Travailleur :
                         </Typography>
-                         <TextField id="outlined-basic" variant="outlined">
+                         <TextField id="outlined-basic" variant="outlined" style={{ width: 300 }}>
                          <input type="text"  />
                         </TextField>
                          
@@ -112,10 +116,10 @@ const Tache= ()=> {
                          
                            
                             
-                            <LocalizationProvider dateAdapter={AdapterDateFns}>
+                            <LocalizationProvider dateAdapter={AdapterDateFns} >
                                 
                                     <DesktopDatePicker
-                                    
+                                    style={{ width: 300 }}
                                     inputFormat="MM/dd/yyyy"
                                     value={value}
                                     onChange={handleChange2}
@@ -126,7 +130,7 @@ const Tache= ()=> {
                          </div>
 
                          
-                         <Button type="submit" variant="contained">
+                         <Button type="submit" variant="contained" style={{ width: 100 }}>
                                 Envoyer
                          </Button>
 
