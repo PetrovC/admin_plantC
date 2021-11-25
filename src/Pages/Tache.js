@@ -1,15 +1,35 @@
-import { Typography } from "@mui/material";
-import React from 'react';
+import { Typography, Button,MenuItem} from "@mui/material";
 import TextField from '@mui/material/TextField';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
 
 import Stack from '@mui/material/Stack';
+import Select from '@mui/material/Select';
+import { useState } from "react";
+
+
+import 'react-datepicker/dist/react-datepicker.css'
+
+import AdapterDateFns from '@mui/lab/AdapterDateFns'
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import DesktopDatePicker from '@mui/lab/DesktopDatePicker';
 
 
 
 const Tache= ()=> {
     
     
+  const [age, setAge]= useState('Choisir');
+  const handleChange = (event) => {
+      setAge(event.target.value)
+  }
+
+  const [selectedDate,setSelectedDate]=  useState('')
+
+  const [value, setValue] = useState(new Date('2014-08-18T21:11:54'));
+
+  const handleChange2 = (newValue) => {
+    setValue(newValue);
+  };
 
    
         
@@ -20,64 +40,100 @@ const Tache= ()=> {
             
             <main>
                 
-                <Typography component ='h1' variant='h3'>
+                <Typography sx={{ mx: "auto"}}  component ='h1' variant='h3'>
                     Tache
                 </Typography>
-                <form >
+                <form>
+                
                 <Stack spacing={3} sx={{ mx: "auto", width: 600 }}>
                         <div>
-                        <Typography component ='h1' variant='h5'>
-                                
-                                type d'activiter
-                                
+
+                        
+                        <Typography sx={{ mx: "auto"}} component ='h1' variant='h5'>
+                            Type d'activité:
                         </Typography>
+                        <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={age}
                         
-                        
-                        <select >
-                            <option value="grapefruit">1</option>
-                            <option value="lime">2</option>
-                            <option value="coconut">3</option>
-                            <option value="mango">4</option>
-                        </select>
+                        onChange={handleChange}
+                        >
+                            
+                        <MenuItem value={10}>Ten</MenuItem>
+                        <MenuItem value={20}>Twenty</MenuItem>
+                        <MenuItem value={30}>Thirty</MenuItem>
+                        </Select>
                        
-                        
+                                  
                         </div>
 
 
                         <div>
-                        <TextField id="outlined-basic" label="Adress" variant="outlined">
+                        <Typography component ='h1' variant='h5'>
+                        Adress :
+                        </Typography>
+                        <TextField id="outlined-basic" variant="outlined">
                         <input type="text"  />
                         </TextField>
                         
                         </div>
                         <div>
+                        <Typography component ='h1' variant='h5'>
+                        Description :
+                        </Typography>
+                  
                         <TextareaAutosize
                         aria-label="minimum height"
-                        label="Description"
+                        
                         minRows={5}
-                        placeholder="Minimum 3 rows"
+                        placeholder="Description"
                         style={{ width: 300 }
                          }
                         ></TextareaAutosize>
+                          
+                         
                         
                         
                          </div>
                          <div>
-                         <TextField id="outlined-basic" label="travailleur" variant="outlined">
+                         <Typography component ='h1' variant='h5'>
+                         Travailleur :
+                        </Typography>
+                         <TextField id="outlined-basic" variant="outlined">
                          <input type="text"  />
                         </TextField>
                          
                          </div>
                          <div>
+                         <Typography component ='h1' variant='h5'>
+                         Date :
+                         </Typography>
                          
-                         
-                        
+                           
+                            
+                            <LocalizationProvider dateAdapter={AdapterDateFns}>
+                                
+                                    <DesktopDatePicker
+                                    
+                                    inputFormat="MM/dd/yyyy"
+                                    value={value}
+                                    onChange={handleChange2}
+                                    renderInput={(params) => <TextField {...params} />}
+                                    />
+                            </LocalizationProvider>
                          
                          </div>
 
-                         <input type="submit" value="Envoyer" />
+                         
+                         <Button type="submit" variant="contained">
+                                Envoyer
+                         </Button>
+
+
                          </Stack>                    
-                    </form>
+                    
+                         </form>
                 
             </main>
             

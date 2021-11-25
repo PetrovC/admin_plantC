@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Typography, Drawer } from "@mui/material";
 import React from 'react';
 
 
@@ -13,9 +13,9 @@ const heads= ()=> {
 
             <main>
                 
-                <Typography component ='h1' variant='h3'>
-                    Header
-                </Typography>
+                <Drawer>
+                    
+                </Drawer>
 
             </main>
         )

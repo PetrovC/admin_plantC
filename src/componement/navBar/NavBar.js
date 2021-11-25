@@ -1,6 +1,7 @@
 // import AppBar from '@mui/material/AppBar';
-import {Box,List,ListItem,ListItemButton } from '@mui/material';
+import {Box,ListItemButton, AppBar, Toolbar, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom'
+// import {ListItem,ListItemButton } from '@mui/material';
 
 const Navvv= ()=> {
     
@@ -12,7 +13,45 @@ const Navvv= ()=> {
         
 
         <div>
-            <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+            <Box sx={{ flexGrow: 1 }}>
+                <AppBar position="static">
+                    <Toolbar>
+                    
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} >
+                        PlantC
+                    </Typography>
+                    <Link to="/Home"  >
+                            <ListItemButton>
+                                Home
+                            </ListItemButton>
+                    </Link>
+                    <Link to="/Tache"  >
+                            <ListItemButton>
+                                Tache
+                            </ListItemButton>
+                    </Link>
+                    <Link to="/Agenda">
+                            <ListItemButton>
+                                Agenda
+                            </ListItemButton>
+                    </Link>
+                    <Link to="/Inscription" >
+                                <ListItemButton>
+                                    Inscription
+                                </ListItemButton>
+                    </Link>
+                    <Link to="/Mission"  >
+                                <ListItemButton >
+                                    Mission
+                                </ListItemButton>
+                    </Link>
+                    
+                        
+                    <Button color="inherit" >Login</Button>
+                    </Toolbar>
+                </AppBar>
+                </Box>
+            {/* <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
                 <nav aria-label="main mailbox folders">
                     <List>
                     <ListItem disablePadding>
@@ -66,7 +105,7 @@ const Navvv= ()=> {
                     </List>
                 </nav>
                 </Box>
-            
+             */}
         </div>
     )
 
