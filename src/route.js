@@ -1,5 +1,5 @@
 import Home from "./Pages/Home"
-import Agenda from "./Pages/Agenda"
+import Agenda from "./Pages/calendar/Agenda"
 import Tache from "./Pages/Tache"
 import Mission from "./Pages/Missions"
 import Inscription from "./Pages/Inscriptions"
