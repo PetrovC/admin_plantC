@@ -1,0 +1,12 @@
+.center{
+    text-align: center;
+    
+}
+.center2{
+    display:block;
+     margin:auto;
+}
+.color{
+    background-color: rebeccapurple;
+    color: white;
+}
