@@ -29,7 +29,7 @@ const Navvv= ()=> {
                     </Link>
                     <Link to="/Tache" className="color" >
                             <ListItemButton>
-                                Tache
+                                Mission
                             </ListItemButton>
                     </Link>
                     <Link to="/Agenda" className="color">
@@ -39,12 +39,12 @@ const Navvv= ()=> {
                     </Link>
                     <Link to="/Inscription" className="color">
                                 <ListItemButton  >
-                                    Inscription
+                                    Ajouter des collaborateurs
                                 </ListItemButton>
                     </Link>
                     <Link to="/Mission" className="color" >
                                 <ListItemButton >
-                                    Mission
+                                   Liste des  Missions
                                 </ListItemButton>
                     </Link>
                     

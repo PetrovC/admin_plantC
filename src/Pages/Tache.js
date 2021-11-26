@@ -28,7 +28,7 @@ const Tache= ()=> {
 
   const [selectedDate,setSelectedDate]=  useState('')
 
-  const [value, setValue] = useState(new Date('2014-08-18T21:11:54'));
+  const [value, setValue] = useState(new Date('2021-11-26T21:11:54'));
 
   const handleChange2 = (newValue) => {
     setValue(newValue);
@@ -44,7 +44,7 @@ const Tache= ()=> {
             <main>
                 
                 <Typography sx={{ mx: "auto"}}  component ='h1' variant='h3' >
-                    Tache
+                    Ajouter Missions
                 </Typography>
                 <form>
                 
@@ -66,9 +66,13 @@ const Tache= ()=> {
                         sx={{ width: '100%'}}
                         >
                             
-                        <MenuItem value={10}>Ten</MenuItem>
-                        <MenuItem value={20}>Twenty</MenuItem>
-                        <MenuItem value={30}>Thirty</MenuItem>
+                        <MenuItem value={10}>Plantation</MenuItem>
+                        <MenuItem value={20}>Tailler-Entretien</MenuItem>
+                        <MenuItem value={30}>Préparation du sol</MenuItem>
+                        <MenuItem value={40}>Arrosage</MenuItem>
+                        <MenuItem value={50}>Balaillage</MenuItem>
+                        <MenuItem value={60}>désherbage</MenuItem>
+                        <MenuItem value={70}>Semis préalable à la plantation </MenuItem>
                         </Select>
                        
                                   
@@ -138,7 +142,7 @@ const Tache= ()=> {
 
                             <Stack sx={{ mx: "auto",width: 600}} >
                          <Button type="submit" variant="contained" style={{ width: 100 }} sx={{ mx: "auto"}}>
-                                Envoyer
+                                Valider
                          </Button>
                          </Stack>
 
