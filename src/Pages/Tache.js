@@ -81,7 +81,7 @@ const Tache= ()=> {
                         <Stack sx={{ mx: "auto",width: 600}} >
                         
                         <Typography component ='h1' variant='h5'sx={{ mx: "auto"}}>
-                        Adress :
+                        Adresse :
                         </Typography>
                         <TextField id="outlined-basic" variant="outlined" sx={{ width: '100%'}}>
                         <input type="text"  />
