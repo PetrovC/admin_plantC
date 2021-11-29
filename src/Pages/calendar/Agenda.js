@@ -1,22 +1,22 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import moment from "moment";
+import "@progress/kendo-theme-default/dist/all.css";
+import PickDateOfBirth from "./components/calendar/PickDateOfBirth";
+import BookDrivingSlot from "./components/calendar/BookDrivingSlot";
+import RoomScheduler from "./components/scheduler/RoomScheduler";
 
 const Agenda = () => {
-  let weekdayshort = moment.weekdaysShort();
-  let weekdayshortname = weekdayshort.map((day) => {
-    return (
-      <th key={day} className="week-day">
-        {day}
-      </th>
-    );
-  });
   return (
     <main>
-      <Typography component="h1" variant="h3">
+      {/* <Typography component="h1" variant="h3">
         Agenda/calendar
         {weekdayshortname}
-      </Typography>
+      </Typography> */}
+      {/* <PickDateOfBirth /> */}
+      {/* <hr className="k-my-8" /> */}
+      {/* <BookDrivingSlot /> */}
+      {/* <hr className="k-my-8" /> */}
+      <RoomScheduler />
     </main>
   );
 };
