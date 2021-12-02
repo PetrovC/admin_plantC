@@ -1,0 +1,10 @@
+@import 'variables';
+
+.MuiModal-root, .MuiBackdrop-root, .MuiPaper-root {
+    top: $header-height!important;
+}
+
+.f-end {
+    display: flex;
+    justify-content: flex-end;
+}
