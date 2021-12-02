@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import React from 'react';
 
 
-const Inscription= ()=> {
+const Mission= ()=> {
     
 
         
@@ -14,7 +14,7 @@ const Inscription= ()=> {
             <main>
                 
                 <Typography component ='h1' variant='h3'>
-                    Agenda
+                    Mission
                 </Typography>
 
             </main>
@@ -23,6 +23,4 @@ const Inscription= ()=> {
     
 
 }
-export default Inscription;
-
-
+export default Mission;
