@@ -1,0 +1,84 @@
+@import '../../variables';
+
+nav {
+    width: 100vw;
+    font-weight: bolder;
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        width: 100%;
+        >li {
+            width: 100%;
+            >a, >div {
+                height: 50px;
+                border-bottom: 1px solid $blue;
+                color: $blue;
+                text-decoration: none;
+                display: block;
+                width: 100%;
+                padding: 0 20px;
+                display: flex;
+                align-items: center;
+                &.active, &.active>span {
+                    background-color: $blue;
+                    color: white;
+                }
+                &:hover {
+                    background-color: rgba($color: $blue, $alpha: 0.5);
+                    color: white;
+                }
+                &.has-sub-menu {
+                    display: flex;
+                    flex-direction: column;
+                    height: unset;
+                    cursor: pointer;
+                    padding: unset;
+                    border-bottom: unset;
+                    &:hover {
+                        background-color: unset;
+                        color: $blue;
+                    }
+                    >span {
+                        height: 50px;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 20px;
+                        justify-content: space-between;
+                        border-bottom: 1px solid $blue;
+                        &:hover {
+                            background-color: rgba($color: $blue, $alpha: 0.5);
+                            color: white;
+                        }
+                    }
+                    >ul {
+                        &.open {
+                            &>li {
+                                height: 50px;
+                            }
+                        }
+                        >li{
+                            transition: .3s linear all;
+                            height: 0;
+                            overflow: hidden;
+                            >a {
+                                padding: 0 40px;
+                            }
+                            >a:not(.active):not(:hover) {
+                                background-color: white;
+                                color: $blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        width: 300px;
+    }
+}

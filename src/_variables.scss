@@ -1,0 +1,10 @@
+$dark: #343633;
+$blue: rgb(25, 118, 210);
+
+$header-height: 70px;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
